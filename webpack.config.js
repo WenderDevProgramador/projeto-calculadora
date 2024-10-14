@@ -1,3 +1,4 @@
+const path = require('path');
 const { default: test } = require("node:test");
 
 module.exports = {
@@ -15,6 +16,7 @@ module.exports = {
         }]
     },
     output: {
-        filename: '[name].min.js'
+        filename: '[name].min.js',
+        path: path.resolve(__dirname, 'docs')
     }
 }
